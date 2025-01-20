@@ -27,6 +27,7 @@
   --grey_light: #f4f4f4;
   --green_light: #8ea59f;
   --gray: #6e6e6e;
+  --nav: 106px;
 }
 
 body {
@@ -35,7 +36,7 @@ body {
 
 nav {
   background-color: var(--dmblack);
-  min-height: 106px;
+  min-height: var(--nav);
   display: flex;
 }
 
@@ -105,7 +106,7 @@ nav {
 
 .header_content_box,
 .header_button_box {
-  margin-top: 143px;
+  margin-top: 123px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -113,11 +114,11 @@ nav {
 
 .header_button_box {
   gap: 24px;
-  margin-top: 60px;
+  margin-top: 50px;
 }
 
 .header_button_box p {
-  font-size: var(--textmd);
+  font-size: 18px;
 }
 
 button {
@@ -131,15 +132,19 @@ button {
 }
 
 .header_button_box button {
-  width: 530px;
-  min-height: 66px;
+  width: 430px;
+  min-height: 56px;
   color: white;
   background-color: var(--dmgreen);
 }
 
 .header_content_box h3 {
-  font-size: 72px;
+  font-size: 62px;
   font-family: var(--primaryf2);
+}
+
+.header_content_box h3:nth-child(2) {
+  color: var(--dmgreen);
 }
 
 .header_img_container {
@@ -147,8 +152,8 @@ button {
   height: 1000px;
   position: absolute;
   top: 53px;
-  right: 99px;
-  width: 100%;
+  right: 0;
+  width: 50%;
 }
 .header_img_container img {
   width: 100%;
@@ -196,8 +201,7 @@ button {
   gap: 48px;
 }
 .info_box {
-  min-width: 325px;
-  max-width: 481px;
+  flex-basis: 481px;
   display: flex;
   flex-direction: column;
   gap: 55px;
@@ -263,8 +267,8 @@ button {
   padding: 60px;
   background-color: white;
   width: 100%;
-  min-width: 735px;
-  max-width: 1071px;
+  width: 1071px;
+  flex-grow: 1;
   border-radius: 20px;
 }
 
@@ -560,7 +564,12 @@ img {
   flex-direction: column;
 }
 
-.steps_block .txt p {
+.steps_block .mb_txt {
+  display: none;
+}
+
+.steps_block .txt p,
+.steps_block .mb_txt span {
   color: var(--accent, #2ec878);
   font-family: var(--primaryf2);
   font-size: 52px;
@@ -570,9 +579,11 @@ img {
   text-transform: uppercase;
 }
 
-.steps_block .txt p:nth-child(2) {
+.steps_block .txt p:nth-child(3),
+.steps_block .mb_txt span span {
   color: var(--dark, #020403);
 }
+
 .team_container {
   display: flex;
   align-items: center;
@@ -707,6 +718,7 @@ footer {
   gap: 48px;
   align-self: stretch;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .footer_container .contact div {
@@ -768,20 +780,99 @@ footer {
   font-weight: 400;
   line-height: 130%;
 }
+.header_inner_two {
+  display: none;
+}
+
+#header_container h1 span {
+  display: none;
+}
 
 @media screen and (max-width: 1300px) {
   #container {
     padding: 0 48px;
   }
+  .pulses_title,
+  .case_block .left .content .title span {
+    font-size: 52px;
+  }
 
+  .form {
+    width: 385px;
+  }
+
+  .fos_container .fos_head h3 {
+    font-size: 38px;
+  }
+
+  .team_container .title h3 {
+    font-size: 58px;
+  }
+
+  .team_container .title p {
+    font-size: 16px;
+  }
+  .pulses_blocks > div {
+    height: 244px;
+  }
+
+  #header_container {
+    padding: 100px 48px;
+  }
+
+  #header_container h1 img {
+    width: 90%;
+  }
+  .txt_container .content {
+    font-size: 16px;
+  }
+  .info_box .title {
+    font-size: 20px;
+  }
+
+  .header_img_container {
+    max-width: 600px;
+    right: 0;
+    top: 191px;
+  }
+
+  .header_button_box P {
+    margin-top: 50px;
+  }
+
+  .container {
+    padding: 0 48px;
+  }
+
+  .steps_block .txt p {
+    font-size: 38px;
+    padding-right: 120px;
+  }
+  .case_block .left {
+    flex-grow: 1;
+    padding-right: 120px;
+  }
+  .case_block .number {
+    flex-basis: 0;
+  }
   .footer_container .contact div h6 {
     font-size: 38px;
   }
 
-  .footer_container .contact div p {
+  .footer_container .contact div p,
+  .bullets .bullet {
     font-size: 16px;
   }
-  
+
+  .case_block .left .content .txt h4 {
+    font-size: 30px;
+  }
+  .case_block .left .content .txt p {
+    font-size: 20px;
+  }
+  .case_block .number .txt p {
+    font-size: 72px;
+  }
 }
 
 @media screen and (max-width: 1024px) {
@@ -789,23 +880,396 @@ footer {
     padding: 0 48px;
   }
 
+  #header_container {
+    padding-top: 61px;
+  }
+
+  #header_container h1 {
+    width: 75%;
+  }
+
+  .header_img_container {
+    top: 144px;
+    height: 450px;
+    width: 55%;
+  }
+
+  .header_content_box {
+    margin-top: 89px;
+  }
+
   .footer_container .contact div h6 {
     font-size: 32px;
+  }
+  .header_content_box h3 {
+    font-size: 42px;
+  }
+
+  .header_button_box button,
+  .header_button_box p {
+    width: 372px;
+    font-size: 16px;
+  }
+
+  .case_box {
+    width: 100%;
+  }
+
+  .yandex_case {
+    padding: 48px;
+    flex-direction: column;
+  }
+  .info_box .title {
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+  .pulses_title {
+    font-size: 42px;
+  }
+  .pulses_blocks > div {
+    height: 214px;
+  }
+  .pulses_blocks {
+    gap: 24px;
+  }
+
+  .pulses_title,
+  .case_block .left .content .title span {
+    font-size: 42px;
+  }
+  .bullets .bullet {
+    height: 40px;
+  }
+  .case_block .number {
+    flex-shrink: 1;
+  }
+  .case_block .number .txt p {
+    font-size: 47px;
+  }
+
+  .case_block .left {
+    padding-right: 101px;
+  }
+
+  .team_block {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
+  .steps_block .txt {
+    display: none;
+  }
+
+  .steps_block .mb_txt {
+    display: block;
+  }
+
+  .steps_block .mb_txt span,
+  .fos_container .fos_head h3 {
+    font-size: 32px;
+  }
+  .form {
+    width: 373px;
+  }
+
+  .team_container .title h3 {
+    font-size: 42px;
+    padding-right: 105px;
+  }
+
+  .nav_container ul {
+    display: none;
+  }
+
+  .nav_container .img_container {
+    width: 188px;
+    height: 34px;
+  }
+
+  nav {
+    min-height: 82px;
   }
 }
 
 @media screen and (max-width: 768px) {
   #container {
     padding: 0 32px;
+    justify-content: center;
   }
 
+  .case_box {
+    padding: 30px;
+    min-height: auto;
+  }
+
+  .card_container {
+    gap: 24px;
+  }
+
+  .house {
+    width: 100px;
+  }
+
+  .case_box_title {
+    padding: 32px 0;
+  }
+
+  .card_container > div {
+    height: 300px;
+  }
+
+  .case_box_title {
+    font-size: 20px;
+  }
+
+  .header_inner_two {
+    display: flex;
+    flex-direction: column;
+    margin-top: 60px;
+  }
   .footer_container .contact div h6 {
     font-size: 32px;
   }
 
-  .footer_container .contact{
-    flex-wrap:wrap;
-    gap:32px;
+  .header_content_box_two h3 {
+    font-size: 42px;
+    font-family: var(--primaryf2);
+  }
+
+  .header_content_box_two h3:nth-child(2),
+  .header_content_box_two h3:nth-child(3) {
+    display: inline;
+  }
+
+  .header_content_box_two h3:nth-child(2) {
+    color: var(--dmgreen);
+  }
+  .header_content_box_two h3:nth-child(3) {
+    margin-left: 10px;
+  }
+  #header_container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #header_container .header_inner {
+    display: none;
+  }
+
+  .header_img_container {
+    position: relative;
+    width: 366px;
+    height: 321px;
+    top: 0;
+    align-self: center;
+  }
+
+  .header_button_box,
+  .header_button_box p {
+    margin-top: 0;
+  }
+
+  .header_button_box button {
+    width: 100%;
+  }
+
+  .header_button_box p {
+    font-size: 20px;
+    width: 100%;
+  }
+
+  .header_content_box {
+    margin-top: 60px;
+  }
+  #header_container h1 {
+    width: 100%;
+  }
+
+  .footer_container .contact {
+    flex-wrap: wrap;
+    gap: 32px;
     justify-content: center;
+  }
+
+  .pulses_blocks {
+    grid-template-columns: 1fr;
+  }
+
+  .pulses_blocks > div {
+    height: 182px;
+  }
+
+  .case_block {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
+  .case_block .container {
+    flex-direction: column;
+  }
+
+  .case_block .left .content .txt h4 {
+    font-size: 28px;
+  }
+
+  .case_block .left {
+    padding-right: 0;
+    flex-basis: 0;
+    margin-bottom: 140px;
+  }
+
+  .case_block .number {
+    flex-direction: row;
+    border-left: none;
+    border-top: 2px solid var(--white, #fff);
+  }
+  .case_block .number .txt:nth-child(2) {
+    border-top: 0;
+    border-left: 2px solid var(--white, #fff);
+  }
+
+  .case_block .number .txt {
+    padding: 32px;
+  }
+
+  .team_container {
+    flex-direction: column;
+  }
+
+  .team_container .title {
+    flex-basis: 0;
+    margin-bottom: 48px;
+  }
+  .team_img {
+    height: 539px;
+  }
+
+  .fos_container {
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  .form {
+    width: 100%;
+  }
+
+  .fos_container .fos_head {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .fos_container .fos_head > * {
+    flex-shrink: 0;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  :root {
+    --nav: 72px;
+  }
+
+  .card_container,
+  .info_box .title {
+    flex-direction: column;
+  }
+
+  .fos_container .fos_head {
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+  .yandex_case {
+    padding: 48px 20px;
+  }
+
+  
+
+  .card_container > div {
+    width: 100%;
+  }
+
+  .container {
+    padding: 0 24px;
+  }
+
+  .pulses_blocks {
+    padding: 0 24px;
+  }
+
+  .container.yandex,
+  .pulses_title,
+  .case_block .left .content .title span {
+    padding: 0;
+  }
+
+  .team_container .title h3 {
+    padding-right: 0;
+  }
+
+  #container {
+    padding: 0 24px;
+  }
+  #header_container {
+    padding: 24px;
+  }
+  .header_content_box_two h3 {
+    font-size: 22px;
+  }
+  .header_content_box_two h3:nth-child(2),
+  .header_content_box_two h3:nth-child(3) {
+    display: block;
+  }
+  .header_content_box_two h3:nth-child(3) {
+    margin-left: 0;
+  }
+
+  .yandex_case {
+    border-radius: 0;
+  }
+
+  .header_button_box p {
+    font-size: 16px;
+  }
+
+  .header_img_container {
+    width: 310px;
+    height: 250px;
+  }
+
+  #header_container h1 {
+    margin-top: 50px;
+  }
+
+  #header_container h1 img {
+    display: none;
+  }
+
+  .header_inner_two {
+    margin-top: 24px;
+  }
+
+  #header_container h1 span {
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: var(--accent, #2ec878);
+    font-family: var(--primaryf2);
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 120%;
+    letter-spacing: 2.88px;
+    color: transparent;
+    display: flex;
+  }
+  .nav_container ul {
+    display: none;
+  }
+
+  .nav_container .img_container {
+    width: 133px;
+    height: 24px;
+  }
+
+  .pulses_title  {
+    padding: 0 24px;
   }
 }
