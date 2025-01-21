@@ -85,6 +85,7 @@ nav {
   font-family: var(--primaryf1);
 }
 
+
 .nav_container ul li.active::after {
   content: "";
   position: absolute;
@@ -131,6 +132,12 @@ button {
   font-family: var(--primaryf1);
 }
 
+
+
+.container.support{
+  padding: 0;
+}
+
 .header_button_box button {
   width: 430px;
   min-height: 56px;
@@ -166,6 +173,20 @@ button {
   border-bottom: 2px solid var(--dmblack);
   margin-top: 80px;
   padding: 20px 0 30px 0;
+  overflow-y: scroll;
+}
+
+.logo_container{
+  flex-shrink: 0;
+}
+.logo5 {
+  width:100px;
+}
+.logo5 img{
+  padding-top: 20px;
+  height: 100%;
+   width:100px;
+   margin-left: -50px;
 }
 
 .support_innner_container {
@@ -173,6 +194,7 @@ button {
   gap: 80px;
   align-items: center;
   height: 100%;
+  justify-content: flex-end;
 }
 
 .logo_container img {
@@ -364,14 +386,40 @@ img {
 }
 
 .pulses_blocks > div {
-  height: 384px;
+  min-height: 384px;
   display: flex;
   padding: 48px;
-  justify-content: center;
   align-items: center;
   gap: 32px;
   border-radius: 20px;
   background: var(--grey_light);
+}
+
+.pulses_blocks > div .thumbs_up{
+  width:300px;
+  height: 300px;
+  flex-shrink: 0;
+  font-weight: 600;
+}
+
+.pulses_blocks div p .active_text{
+  color:var(--dmgreen);
+}
+
+.pulses_blocks div p {
+  font-size:24px;
+  font-family: var(--primaryf1);
+}
+
+.pulses_blocks div p .active_text{
+  color:var(--dmgreen);
+}
+
+
+.pulses_blocks > div .thumbs_up img{
+  display:block;
+  width: 100%;
+  height: 100%;
 }
 
 .case_section {
@@ -553,7 +601,6 @@ img {
 }
 
 .steps_block {
-  padding: 150px 0;
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
@@ -563,6 +610,8 @@ img {
   display: flex;
   flex-direction: column;
 }
+
+
 
 .steps_block .mb_txt {
   display: none;
@@ -582,6 +631,85 @@ img {
 .steps_block .txt p:nth-child(3),
 .steps_block .mb_txt span span {
   color: var(--dark, #020403);
+}
+
+.step_blocks_container{
+  display:flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-top: 180px;
+  padding-bottom: 180px;
+}
+
+.lines{
+  display: flex;
+  flex-direction: column;
+  position:relative;
+  gap: 48px;
+  padding-left: 32px;
+  position: relative;
+}
+
+.lines::before{
+  content: "";
+  width: 2px;
+  background-color: #020403;
+  position: absolute;
+  left: -12px;
+  height: 100%;
+}
+
+.line {
+  display: flex;
+  flex-direction: column;
+  gap:16px;
+  position: relative;
+}
+
+.line::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -56px;
+  width: 24px;
+  height: 24px;
+  border-radius: 100%;
+  background-color: #020403;
+}
+
+.line.line_active::before {
+  background-color: var(--dmgreen);
+}
+
+.line  .title{
+  color: var(--dark, #020403);
+  font-family: var(--primaryf1);
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 130%;
+}
+
+.line.line_active .title{
+  color: var(--dark, #020403);
+  font-family: var(--primaryf1);
+  font-size: 32px;
+  font-weight: 800;
+  line-height: 130%;
+}
+
+
+
+
+
+.line p{
+  color: var(--green_light, #8EA59F);
+  font-family: var(--primaryf1);
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 130%;
+  max-width: 780px;
+  width: 100%;
 }
 
 .team_container {
@@ -797,6 +925,15 @@ footer {
     font-size: 52px;
   }
 
+  .pulses_blocks > div .thumbs_up{
+    width: 180px;
+    height: 180px;  
+  }
+
+  .pulses_blocks div p{
+    font-size: 20px;
+  }
+
   .form {
     width: 385px;
   }
@@ -813,7 +950,7 @@ footer {
     font-size: 16px;
   }
   .pulses_blocks > div {
-    height: 244px;
+    min-height: 244px;
   }
 
   #header_container {
@@ -873,6 +1010,10 @@ footer {
   .case_block .number .txt p {
     font-size: 72px;
   }
+  .logo_container{
+    width: 223px;
+    height:81px;
+  }
 }
 
 @media screen and (max-width: 1024px) {
@@ -880,10 +1021,41 @@ footer {
     padding: 0 48px;
   }
 
+  .step_blocks_container{
+    flex-direction:column;
+    padding-top: 160px;
+    padding-bottom: 160px;
+    gap: 48px;
+  }
+
+  .lines{
+    padding-left: 54px;
+  }
+
+  .lines::before{
+    left: 10px;
+  }
+
+  .steps_block .mb_txt{
+    font-size:32px;
+  }
+
   #header_container {
     padding-top: 61px;
   }
 
+  .pulses_blocks > div .thumbs_up{
+    width:150px;
+    height:150px;
+  }
+
+  .pulses_blocks > div{
+    padding: 32px 32px 32px 16px;
+  }
+
+  .pulses_blocks > div{
+    gap:24px;
+  }
   #header_container h1 {
     width: 75%;
   }
@@ -927,7 +1099,7 @@ footer {
     font-size: 42px;
   }
   .pulses_blocks > div {
-    height: 214px;
+    min-height: 214px;
   }
   .pulses_blocks {
     gap: 24px;
@@ -977,8 +1149,9 @@ footer {
     padding-right: 105px;
   }
 
-  .nav_container ul {
-    display: none;
+  .logo_container{
+    width: 223px;
+    height:81px;
   }
 
   .nav_container .img_container {
@@ -989,12 +1162,26 @@ footer {
   nav {
     min-height: 82px;
   }
+
+  .logo_container{
+    width: 223px;
+    height:81px;
+  }
 }
 
 @media screen and (max-width: 768px) {
   #container {
     padding: 0 32px;
     justify-content: center;
+  }
+
+  .nav_container ul {
+    display: none;
+  }
+
+  .logo_container{
+    width: 223px;
+    height:81px;
   }
 
   .case_box {
@@ -1096,7 +1283,7 @@ footer {
   }
 
   .pulses_blocks > div {
-    height: 182px;
+    min-height: 182px;
   }
 
   .case_block {
@@ -1163,9 +1350,47 @@ footer {
   }
 }
 
-@media screen and (max-width: 414px) {
+@media screen and (max-width: 540px) {
   :root {
     --nav: 72px;
+  }
+
+  .case_block .number .txt{
+    padding: 0;
+  }
+
+  .case_block .number .txt p{
+    font-size: 32px;
+  }
+
+  .container.step_blocks_container{
+    padding-top:200px ;
+    padding-bottom:200px ;
+  }
+
+  .container.support{
+    padding: 0;
+    padding-bottom: 20px;
+  }
+
+  .logo_container{
+    flex-shrink: 0;
+    width:214px;
+    height:60px;
+  }
+
+  .case_block .number .txt:nth-child(1){
+    padding-top: 24px;
+    padding-right: 16px;
+  }
+
+  .case_block .number .txt:nth-child(2){
+    padding-top: 24px;
+    padding-left: 16px;
+  }
+
+  .case_block .number .txt small{
+    font-size: 16px;
   }
 
   .card_container,
@@ -1182,8 +1407,16 @@ footer {
     padding: 48px 20px;
   }
 
+  .pulses_blocks > div{
+    flex-direction:column ;
+    min-height: 304px;
+    align-items: center;
+  }
   
 
+  .pulses_blocks div p{
+    text-align: center;
+  }
   .card_container > div {
     width: 100%;
   }
