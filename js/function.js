@@ -1,7 +1,19 @@
 document.addEventListener("DOMContentLoaded", function () {
+  const container = document.querySelector(".support_innner_container");
+  const clone = container.cloneNode(true); 
+  //container.parentElement.appendChild(clone);
+
+  //gsap.set(".support_innner_container", { x: "-50%" });
+
+  /*gsap.to(".support_innner_container", {
+    x: "-100%",
+    duration: 20,
+    ease: "linear",
+    repeat: -1,
+  });*/
   const phoneInput = document.getElementById("phoneInput");
 
-  phoneInput.value = "+7";
+  //phoneInput.value = "+7";
 
   phoneInput.addEventListener("input", function (e) {
     let value = e.target.value;
@@ -86,4 +98,6 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   });
+
+  
 });
