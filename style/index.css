@@ -41,25 +41,24 @@ nav {
   transition: all 0.3s ease;
 }
 
-
 nav.fixed {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 1000;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    animation: slideDown 0.5s ease;
-    background-color: var(--dmblack);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  animation: slideDown 0.5s ease;
+  background-color: var(--dmblack);
 }
 
 @keyframes slideDown {
-    from {
-        transform: translateY(-100%);
-    }
-    to {
-        transform: translateY(0);
-    }
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
 }
 
 #container,
@@ -106,11 +105,11 @@ nav.fixed {
   height: 100%;
   font-family: var(--primaryf1);
 }
-  .container.support{
-    display:flex;
-    overflow: hidden;
-    gap:80px;
-  }
+.container.support {
+  display: flex;
+  overflow: hidden;
+  gap: 80px;
+}
 
 .nav_container ul li.active::after {
   content: "";
@@ -121,6 +120,10 @@ nav.fixed {
   display: block;
   height: 2px;
   background-color: var(--dmgreen);
+}
+
+header{
+  overflow:hidden;  
 }
 
 #header_container {
@@ -160,12 +163,9 @@ button {
 
 .container.support {
   padding: 0;
-  margin:0;
-  max-width:100%;
-
+  margin: 0;
+  max-width: 100%;
 }
-
-
 
 .header_button_box button {
   width: 600px;
@@ -191,7 +191,87 @@ button {
   right: 0;
   width: 55%;
 }
-.header_img_container img {
+
+.header_img_container_inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.music {
+  position: absolute;
+}
+
+.music div img {
+  width: 100%;
+  height: 100%;
+}
+
+.dollar_container {
+  top: 357px;
+  left: 190px;
+}
+.hashiso_container {
+  right: 35%;
+  top: 357px;
+}
+.hashiso2_container{
+  top: 50%;
+  left:25%;
+}
+.at_container{
+  bottom: 35%;
+  left:45%;
+}
+.at{
+  width: 126px;
+  height: 126px;
+}
+.dollar2{
+  width: 130px;
+  height: 130px;
+}
+.dollar2_container{
+  right:30%;
+  bottom:32%;
+}
+.megaphone_container {
+  top: 235px;
+  left: 35%;
+}
+.notifyheart_container {
+  top: 225px;
+  right: 20%;
+}
+.notifyheart {
+  width: 179px;
+  height: 179px;
+}
+.megaphone {
+  width: 214px;
+  height: 214px;
+}
+.hashiso {
+  width: 131px;
+  height: 131px;
+}
+.hashiso2{
+  width: 71px;
+  height: 71px;
+}
+.macbook_container {
+  width: 100%;
+  height: 100%;
+  left: 0;
+}
+
+.dollar {
+  width: 92px;
+  height: 92px;
+}
+
+
+.macbook_container img {
   width: 100%;
   object-fit: contain;
 }
@@ -207,9 +287,13 @@ button {
 .logo_container {
   flex-shrink: 0;
   width: auto;
-  height:120px;
+  height: 120px;
   display: flex;
   align-items: center;
+}
+
+.logo_container img {
+  height: 100%;
 }
 .logo5 {
   width: 100px;
@@ -344,63 +428,62 @@ button {
   gap: 48px;
 }
 
-.card_container .card{
-  background-color:var(--dmgreen) ;
+.card_container .card {
+  background-color: var(--dmgreen);
   padding: 42px 32px 0px 32px;
   overflow: hidden;
   position: relative;
 }
 
-.card_container .card .content{
+.card_container .card .content {
   display: flex;
   flex-direction: column;
   gap: 24px;
 }
 
 .card_container .card .content h5 {
-  color: var(--white, #FFF);
+  color: var(--white, #fff);
   font-family: var(--primaryf2);
   font-size: 72px;
   font-style: normal;
   font-weight: 600;
-  line-height: 100%; 
+  line-height: 100%;
 }
 
-.card_container .card .content p{
-    color: var(--white, #FFF);
-    font-family: var(--primaryf1);
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 130%; 
+.card_container .card .content p {
+  color: var(--white, #fff);
+  font-family: var(--primaryf1);
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 130%;
 }
 
-.cards_box{
+.cards_box {
   position: absolute;
-  bottom:0;
+  bottom: 0;
   display: flex;
   justify-content: space-between;
-  width:100%;
+  width: 100%;
   left: 0;
 }
 
-.card_inner_box{
-  position:relative;
+.card_inner_box {
+  position: relative;
   display: flex;
   width: 100%;
 }
-.cards_box .disc2{
-  width:177px;
-  height:145px;
-  left:62px;
+.cards_box .disc2 {
+  width: 177px;
+  height: 145px;
+  left: 62px;
   bottom: -52px;
   position: absolute;
 }
 
-
-.cards_box .disc1{
-  width:182px;
-  height:285px;
+.cards_box .disc1 {
+  width: 182px;
+  height: 285px;
   right: 32px;
   bottom: -15px;
   position: absolute;
@@ -1104,12 +1187,7 @@ footer {
   display: none;
 }
 
-
-
-
 @media screen and (max-width: 1900px) {
- 
-
   .card_container div:nth-child(2) .card_title {
     font-size: 20px;
   }
@@ -1143,8 +1221,6 @@ footer {
     justify-content: space-between;
   }
 
-  
-
   .form input[type="text"],
   .submit_button {
     width: 385px;
@@ -1171,7 +1247,6 @@ footer {
     height: 180px;
   }
 
-  
   .form {
     width: 385px;
   }
@@ -1203,9 +1278,6 @@ footer {
     margin-top: 50px;
   }
 
- 
-  
- 
   .footer_container .contact div h6 {
     font-size: 38px;
   }
@@ -1215,43 +1287,36 @@ footer {
     font-size: 16px;
   }
 
-
   .case_block .left .content .txt p {
     font-size: 20px;
   }
 
-   .header_content_box h3{
-    font-size:62px;
+  .header_content_box h3 {
+    font-size: 62px;
   }
-  
 }
 
-
 @media screen and (max-width: 1600px) {
-    .case_box{
-      padding:30px;
-      
-    }
-    .txt_container .content{
-      font-size: 16px;
-    }
+  .case_box {
+    padding: 30px;
+  }
+  .txt_container .content {
+    font-size: 16px;
+  }
 
-    .card_container{
-      gap:24px;
-    }
+  .card_container {
+    gap: 24px;
+  }
 
-    .steps_block .txt p{
-      font-size: 38px;
-      padding-right: 230px;
-    }
-
-
+  .steps_block .txt p {
+    font-size: 38px;
+    padding-right: 230px;
+  }
 }
 
 @media screen and (max-width: 1400px) {
-  
-  #header_container h1 img{
-    width:78%;
+  #header_container h1 img {
+    width: 78%;
   }
 
   .team_img_left div,
@@ -1259,7 +1324,7 @@ footer {
     height: 551px;
   }
 
-  .header_content_box h3{
+  .header_content_box h3 {
     font-size: 42px;
   }
   .form input[type="text"],
@@ -1274,22 +1339,22 @@ footer {
     flex-direction: column;
   }
 
-  .steps_block .txt{
+  .steps_block .txt {
     display: none;
   }
 
-  .line.line_active .title{
+  .line.line_active .title {
     font-size: 24px;
   }
 
-  .line p{
+  .line p {
     font-size: 16px;
   }
-  .steps_block .txt p{
+  .steps_block .txt p {
     display: none;
   }
 
-  .steps_block .mb_txt{
+  .steps_block .mb_txt {
     display: flex;
   }
 
@@ -1321,7 +1386,7 @@ footer {
   .pulses_blocks > div {
     gap: 24px;
   }
-  
+
   .header_img_container {
     top: 100px;
     height: 450px;
@@ -1335,7 +1400,6 @@ footer {
   .footer_container .contact div h6 {
     font-size: 32px;
   }
-  
 
   .header_button_box button,
   .header_button_box p {
@@ -1388,8 +1452,6 @@ footer {
     padding-bottom: 100px;
   }
 
- 
-
   .steps_block .mb_txt span,
   .fos_container .fos_head h3 {
     font-size: 32px;
@@ -1428,8 +1490,6 @@ footer {
     padding: 0 32px;
     justify-content: center;
   }
-
-  
 
   .house {
     width: 200px;
@@ -1647,103 +1707,105 @@ footer {
   }
 }
 
-
-@media screen and (max-width:1024px){
-  .pulses_blocks{
-    display:grid;
+@media screen and (max-width: 1024px) {
+  .pulses_blocks {
+    display: grid;
     grid-template-columns: 1fr;
   }
-  .pulses_blocks div p{
+  .pulses_blocks div p {
     font-size: 20px;
   }
-  .team_container{
-    flex-direction:column;
+  .team_container {
+    flex-direction: column;
   }
-  .form, .form input[type="text"], .submit_button{
+  .form,
+  .form input[type="text"],
+  .submit_button {
     width: 100%;
   }
-      .fos_container {
-        flex-direction: column;
-        gap: 32px;
-    }
+  .fos_container {
+    flex-direction: column;
+    gap: 32px;
+  }
 
-    .fos_container .fos_head{
-      width:100%;
-    }
-    .case_block .number {
-        flex-direction: row;
-        border-left: none;
-        border-top: 2px solid var(--white, #fff);
-        flex-basis: 0;
-        margin-top: 150px;
-    }
+  .fos_container .fos_head {
+    width: 100%;
+  }
+  .case_block .number {
+    flex-direction: row;
+    border-left: none;
+    border-top: 2px solid var(--white, #fff);
+    flex-basis: 0;
+    margin-top: 150px;
+  }
 
-    .case_block .number .txt:nth-child(2) {
-        border-top: 0;
-        border-left: 2px solid var(--white, #fff);
-    }
+  .case_block .number .txt:nth-child(2) {
+    border-top: 0;
+    border-left: 2px solid var(--white, #fff);
+  }
 
-  .team_img{
-    width:100%;
+  .team_img {
+    width: 100%;
     margin-top: 48px;
   }
 
-  .container.carousel{
-    flex-direction:column;
+  .container.carousel {
+    flex-direction: column;
   }
 
-  .case_block .left{
+  .case_block .left {
     flex-basis: 0;
   }
 
-  .team_img_left div, .team_img_right div{
+  .team_img_left div,
+  .team_img_right div {
     height: 600px;
   }
 }
 
-@media screen and (max-width:1300px){
-  .case_box{
-    padding:30px;
+@media screen and (max-width: 1300px) {
+  .case_box {
+    padding: 30px;
   }
-  .card_container{
+  .card_container {
     gap: 24px;
   }
-  .card_container .card .content h5{
+  .card_container .card .content h5 {
     font-size: 42px;
   }
-  .card_container .card .content p{
-    font-size:16px;
+  .card_container .card .content p {
+    font-size: 16px;
   }
 }
 
-
-@media screen and (max-width:769px){
-  
-  .card_container{
+@media screen and (max-width: 769px) {
+  .card_container {
     flex-direction: column;
   }
 
-  .team_img_right{
+  .team_img_right {
     display: none;
   }
-  .card_container > div,.team_img_left{
-    width:100%;
+  .card_container > div,
+  .team_img_left {
+    width: 100%;
   }
 
-  .team_img{
+  .team_img {
     height: 500px;
   }
-  
-  .team_img_left div img, .team_img_right div img{
-    height:500px;
+
+  .team_img_left div img,
+  .team_img_right div img {
+    height: 500px;
   }
   .cards_box .disc2 {
     width: 137px;
     height: 132px;
   }
 
-  .cards_box .disc1{
-    width:153px;
+  .cards_box .disc1 {
+    width: 153px;
   }
 }
 
@@ -1773,7 +1835,6 @@ footer {
     padding: 0;
     padding-bottom: 20px;
   }
-
 
   .logo_container {
     flex-shrink: 0;
