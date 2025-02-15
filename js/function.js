@@ -12,6 +12,9 @@ document.addEventListener("DOMContentLoaded", function () {
   const dollarMd = document.querySelector(".dollar_container");
   const hashSm = document.querySelector(".hashiso_container");
   const hashMd = document.querySelector(".hashiso2_container");
+  const disc1 = document.querySelector(".disc1");
+  const disc2 = document.querySelector(".disc2");
+  const thumbsUpElements = document.querySelectorAll(".thumbs_up");
 
   const IS_1900 = document.documentElement.clientWidth >= 1900;
   const IS_1600 = document.documentElement.clientWidth >= 1600;
@@ -19,6 +22,16 @@ document.addEventListener("DOMContentLoaded", function () {
   const IS_768 = document.documentElement.clientWidth >= 768;
   const IS_540 = document.documentElement.clientWidth >= 540;
   const IS_414 = document.documentElement.clientWidth >= 414;
+
+  thumbsUpElements.forEach((thumb, index) => {
+    gsap.to(thumb, {
+      rotation: 20, 
+      duration: 2,
+      ease: "power1.inOut",
+      yoyo: true,
+      repeat: -1, 
+    });
+  });
 
   const sharedArgs = {
     ease: "power1.inOut",
@@ -72,6 +85,22 @@ document.addEventListener("DOMContentLoaded", function () {
     y: IS_1900 ? 0 : IS_1600 ? 0 : IS_1400 ? 0 : IS_768 ? 0 : 0,
     x: IS_1900 ? 90 : IS_1600 ? 80 : IS_1400 ? 70 : IS_768 ? 30 : 30,
     ...sharedArgs,
+  });
+
+  gsap.to(disc1, {
+    rotation: 30,
+    duration: 2,
+    ease: "power1.inOut",
+    yoyo: true,
+    repeat: -1,
+  });
+
+  gsap.to(disc2, {
+    rotation: 30,
+    duration: 2,
+    ease: "power1.inOut",
+    yoyo: true,
+    repeat: -1,
   });
 
   let offset = 0;

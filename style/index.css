@@ -866,6 +866,14 @@ img {
   height: 100%;
 }
 
+.inner-line {
+  position: absolute;
+  left: -12px;
+  width: 2px;
+  background-color: var(--dmgreen); 
+  height: 0%; 
+}
+
 .line {
   display: flex;
   flex-direction: column;
@@ -913,6 +921,16 @@ img {
   line-height: 130%;
   max-width: 780px;
   width: 100%;
+}
+
+.progress-line {
+  position: absolute;
+  left: -12px;
+  top: 0;
+  width: 2px;
+  height: 0; 
+  background-color: var(--dmgreen); 
+  transition: height 0.3s ease-out;
 }
 
 .team_container {
@@ -985,11 +1003,14 @@ img {
   gap: 20px;
 }
 
+
+
 .team_img_left div img,
 .team_img_right div img {
   display: block;
   width: 100%;
-  height: 100%;
+  height: 470px;
+  object-fit: cover;
 }
 
 .team_img::before {
@@ -1013,6 +1034,13 @@ img {
   bottom: 0;
   left: 0;
   z-index: 10;
+}
+
+.team_img_right > div,
+.team_img_left > div{
+  display:flex;
+  flex-direction:column;
+  gap:20px;
 }
 
 .fos {
