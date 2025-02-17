@@ -111,6 +111,28 @@ nav.fixed {
   gap: 80px;
 }
 
+.footer_video_container{
+  height:250px;
+  width:100%;
+  position:relative;
+}
+
+.video_box{
+  width:100%;
+  position:absolute;
+  left:50%;
+  top:50%;
+  height:1000px;
+  transform:translate(-50%,-50%);
+  bottom:0;
+}
+
+.video_box video{
+  width:100%;
+  height:100%;
+  display:block;
+}
+
 .nav_container ul li.active::after {
   content: "";
   position: absolute;
@@ -842,23 +864,19 @@ img {
 
 .step_blocks_container {
   display: flex;
-  justify-content: space-between;
   align-items: flex-start;
   padding-top: 180px;
   padding-bottom: 180px;
 }
-
 .lines {
   display: flex;
   flex-direction: column;
   position: relative;
   gap: 48px;
   padding-left: 32px;
-  position: relative;
 }
 
-.lines::before {
-  content: "";
+.verticalline {
   width: 2px;
   background-color: #020403;
   position: absolute;
@@ -866,13 +884,11 @@ img {
   height: 100%;
 }
 
-.inner-line {
-  position: absolute;
-  left: -12px;
+.verticalline .inner-line{
   width: 2px;
-  background-color: var(--dmgreen); 
-  height: 0%; 
+  background-color:var(--dmgreen);
 }
+
 
 .line {
   display: flex;
@@ -905,14 +921,16 @@ img {
 }
 
 .line.line_active .title {
-  color: var(--dark, #020403);
-  font-family: var(--primaryf1);
   font-size: 32px;
   font-weight: 800;
-  line-height: 130%;
 }
 
-.line p {
+.line .title{
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.line.line_active p {
   color: var(--green_light, #8ea59f);
   font-family: var(--primaryf1);
   font-size: 20px;
@@ -920,18 +938,15 @@ img {
   font-weight: 400;
   line-height: 130%;
   max-width: 780px;
-  width: 100%;
+  opacity: 1;
+  height: auto;
 }
 
-.progress-line {
-  position: absolute;
-  left: -12px;
-  top: 0;
-  width: 2px;
-  height: 0; 
-  background-color: var(--dmgreen); 
-  transition: height 0.3s ease-out;
+.line p {
+  opacity: 0;
+  height: 0;
 }
+
 
 .team_container {
   display: flex;
@@ -1131,6 +1146,7 @@ img {
 footer {
   background-color: black;
   padding: 170px 0 48px 0;
+  overflow:hidden;
 }
 
 .footer_container {
@@ -1178,7 +1194,6 @@ footer {
 }
 
 .footer_container .info {
-  padding-top: 250px;
   display: flex;
   justify-content: center;
   width: 100%;
@@ -1518,6 +1533,8 @@ footer {
     padding: 0 32px;
     justify-content: center;
   }
+
+ 
 
   .house {
     width: 200px;

@@ -213,10 +213,7 @@ document.addEventListener("DOMContentLoaded", function () {
     requestAnimationFrame(raf);
   }
   requestAnimationFrame(raf);
-
-  window.addEventListener("scroll", () => {
-    lenis.onScroll((e) => {});
-  });
+  
 
   lenis.on("scroll", () => {
     if (lenis.scroll > scrollOffset) {
